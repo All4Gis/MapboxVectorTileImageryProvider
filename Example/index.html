@@ -8,15 +8,19 @@
     content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <title>Cesium Viewer</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="CesiumViewer/CesiumViewer.css" media="screen" />
+  
+  <link rel="stylesheet" href="../node_modules/cesium/Build/Cesium/Widgets/widgets.css" media="screen" />
+  <link rel="stylesheet" href="map.css" media="screen" />
+
+ 
 </head>
 
-<body style="background: #000;">
+<body>
   <div id="cesiumContainer" class="fullWindow"></div>
-  <script src="../Build/Cesium/Cesium.js"></script>
+  <script src="../node_modules/cesium/Build/Cesium/Cesium.js"></script>
   <script type="module">
     
-    import MapboxVectorTileImageryProvider from '../node_modules/@robbo1975/index.js';
+    import MapboxVectorTileImageryProvider from '../index.js';
 
     var mapbox = new MapboxVectorTileImageryProvider({
       url: 'https://basemaps.arcgis.com/arcgis/rest/services/OpenStreetMap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
